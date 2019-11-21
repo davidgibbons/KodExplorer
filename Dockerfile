@@ -19,12 +19,7 @@ RUN set -x \
 
 WORKDIR /var/www/html
 
-COPY . .
+COPY --chown=www-data:www-data . .
 
 CMD ["apache2-foreground"]
 
-# git clone https://github.com/kalcaddle/KodExplorer
-# docker run --name kodexplorer --rm -d \
-#    -v $HOME:/var/www/html/data/User/admin/home \
-#    -v $(pwd)/KodExplorer:/var/www/html \
-#    kodexplorer
