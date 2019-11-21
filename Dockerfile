@@ -19,6 +19,8 @@ RUN set -x \
 
 WORKDIR /var/www/html
 
+COPY . .
+
 CMD ["apache2-foreground"]
 
 # git clone https://github.com/kalcaddle/KodExplorer
